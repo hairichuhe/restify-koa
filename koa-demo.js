@@ -1,12 +1,13 @@
-var koa=require("koa");
-var app=koa();
+const koa=require("koa");
+const app=new koa();
+const router=require("koa-router")();
 
-app.get("/",function(req,res){
-	res.send("hello world");
+router.get("/",function(ctx,next){
+	ctx.body="hello world";
 });
 
 var server = app.listen(8081,function(){
 	var host=server.address().address;
 	var port=server.address().port;
-	console.log("应用实例访问地址为%s:%s");
+	console.log("应用实例访问地址为%s:%s",host,port);
 })
