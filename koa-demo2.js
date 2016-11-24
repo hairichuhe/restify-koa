@@ -1,7 +1,12 @@
 const koa=require("koa");
 const app=new koa();
 const router=require("koa-router")();
-const sendfile=require("koa-sendfile");
+const fs=require("fs");
+const readFile = file =>{
+	return new Promise((resolve,reject)=>{
+		fs.readFile(file,(err,data)=>err?reject(err):resolve(data))
+	})
+}
 
 //主页输出hello world
 router.get("/",function(ctx,next){
@@ -28,15 +33,26 @@ router.get("/user_list",function(ctx,next){
 })
 
 // 对/ab*cd页面响应
-router.get("/ab*cd",function(ctx,next){
+router.get("/ab*cd",(ctx,next)=>{
 	console.log("对/ab*cd页面响应");
 	ctx.body="对/ab*cd页面响应"
 })
 
 // get.html响应
-router.get("/get.html",function(ctx,next){
-	var stats=yield sendfile(ctx,"/get.html")
-	if(!ctx.status) throw(404);
+// router.get("/get.html",(ctx,next)=>{
+// 	// fs.readFile("get.html",function(err,data){
+// 	// 	if(err){
+// 	// 		console.log(err)
+// 	// 	};
+// 	// 	console.log(data.toString())
+// 	// 	ctx.body=data.toString();
+// 	// })
+// 	ctx.body=fs.createReadStream("get.html").toString();
+// })
+
+router.get("/get", async (ctx,next)=>{
+	let content = await readFile("get.html");
+	ctx.body=content;
 })
 
 // process_get
