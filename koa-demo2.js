@@ -3,12 +3,13 @@ const app=new koa();
 const router=require("koa-router")();
 const fs=require("fs");
 const bodyParser=require("koa-bodyparser");
+const multer=require("koa-multer");
 const readFile = file =>{
 	return new Promise((resolve,reject)=>{
 		fs.readFile(file,(err,data)=>err?reject(err):resolve(data))
 	})
 };
-
+const upload = multer({ dest: 'uploads/' });
 app.use(bodyParser());
 
 //主页输出hello world
@@ -115,10 +116,15 @@ router.get("/file.html",(ctx,next)=>{
 	ctx.body=res;
 })
 
-router.post("/file_upload",(ctx,next)=>{
-	console.log(ctx.request);
-	ctx.body={"name":"yaya"}
-})
+// app.use(router.post("/file_upload",(ctx,next)=>{
+// 		upload.single("avatar")
+// 		ctx.body={"name":"yaya"}
+// 	})
+// );
+
+router.post('/file_upload', upload.single('avatar')),(ctx,next)=>{
+	ctx.body={success:"上传成功！"}
+};
 
 app.use(router.routes(),router.allowedMethods())
 // app.use(function* (){
