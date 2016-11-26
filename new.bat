@@ -2,11 +2,11 @@
 if "%1"=="ray" goto s
 start "" "%~0" ray
 echo Home here.
-pause>nul
-exit
+rem pause>nul
+rem exit
 :s
 echo yes.
-ping -n 2 127.1>nul
-echo no.
-color f0
-exit
+rem ping -n 2 127.1>nul
+rem echo no.
+rem color f0
+rem exit
