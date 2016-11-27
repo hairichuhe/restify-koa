@@ -1,4 +1,5 @@
 @echo off
 echo clean
-fis3 server clean
+node koa-demo.js
+if %ERRORLEVEL% EQU 0 (echo success) else (exit)
 cmd
