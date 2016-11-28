@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>网评员管理 | 指挥调度考核评估平台</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div id="organization-tree-modal" class="mainnav-menu bootbox modal in" tabindex="-1" role="dialog"
+     style="display: block;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form id="treeOfOrg-form" class="form-horizontal bv-form" novalidate="novalidate">
+                <div class="modal-header">
+                    <button class="bootbox-close-button close" data-dismiss="modal" aria-hidden="true">×
+                    </button>
+                    <h4 class="modal-title">组织架构</h4></div>
+                <div class="modal-body">
+                    <div class="bootbox-body">
+                        <nav class="vbox vbox1  biank" style=" height:400px;">
+
+                            <div class="panel-titlez bianxia  zeta-bgcolor-bai3">
+                                <div class="input-group w160px pull-left"><input class="form-control" name="orgName"
+                                                                                 placeholder="输入关键字" type="text"><span
+                                        class="input-group-btn"><button class="btn btn-tmbai btn-sm" type="button"><i
+                                        class="fa fa-search fa-lg"></i></button></span></div>
+
+                            </div>
+                            <div class="scrollable hover" style="margin-top: 53px;width: 100%;overflow:auto">
+                                <div class="row" style="margin: 0">
+                                    <div class="col-xs-12" style="padding: 0">
+                                        <ul id="treeOfOrg" class=".mainnav-menu list-group orgTree"
+                                            style="margin-bottom: 0px;">
+                                            <li class="subNode-expand" data-node-id="1" data-node-pid="0"
+                                                data-node-name="总公司"><a class="orgnization-name"><i
+                                                    class="fa fa-minus-square"></i><span class="menu-title dx8"
+                                                                                         data-node-index="1">总公司</span></a>
+                                                <div class="pull-right" style=" padding-top:15px;"><span
+                                                        class="anshowno zeta-showno anbj"><a href="#"><i
+                                                        class="fa fa-pencil fa-lg"></i></a><a href="#"><i
+                                                        class="fa fa-fa fa-times fa-lg"></i></a><a href="#"><i
+                                                        class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                        class="form-radio form-icon"><input class="org-radio"
+                                                                                            type="radio"></label></div>
+                                                <ul class="zeta-bgcolor05 collapse in">
+                                                    <li class="subNode-expand" data-node-id="7" data-node-pid="1"
+                                                        data-node-name="省市区"><a class="orgnization-name"><i
+                                                            class="fa fa-plus-square"></i><span class="menu-title dx8"
+                                                                                                data-node-index="7">省市区</span></a>
+                                                        <div class="pull-right" style=" padding-top:15px;"><span
+                                                                class="anshowno zeta-showno anbj"><a href="#"><i
+                                                                class="fa fa-pencil fa-lg"></i></a><a href="#"><i
+                                                                class="fa fa-fa fa-times fa-lg"></i></a><a href="#"><i
+                                                                class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                class="form-radio form-icon"><input class="org-radio"
+                                                                                                    type="radio"></label>
+                                                        </div>
+                                                        <ul class="zeta-bgcolor05 collapse">
+                                                            <li data-node-id="210" data-node-pid="7"
+                                                                data-node-name="北京"><a class="orgnization-name"><i
+                                                                    class="fa fa-minus-square"></i><span
+                                                                    class="menu-title dx8"
+                                                                    data-node-index="210">北京</span></a>
+                                                                <div class="pull-right" style=" padding-top:15px;"><span
+                                                                        class="anshowno zeta-showno anbj"><a href="#"><i
+                                                                        class="fa fa-pencil fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                        class="form-radio form-icon"><input
+                                                                        class="org-radio" type="radio"></label></div>
+                                                            </li>
+                                                            <li data-node-id="211" data-node-pid="7"
+                                                                data-node-name="天津"><a class="orgnization-name"><i
+                                                                    class="fa fa-minus-square"></i><span
+                                                                    class="menu-title dx8"
+                                                                    data-node-index="211">天津</span></a>
+                                                                <div class="pull-right" style=" padding-top:15px;"><span
+                                                                        class="anshowno zeta-showno anbj"><a href="#"><i
+                                                                        class="fa fa-pencil fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                        class="form-radio form-icon"><input
+                                                                        class="org-radio" type="radio"></label></div>
+                                                            </li>
+                                                            <li data-node-id="212" data-node-pid="7"
+                                                                data-node-name="河北"><a class="orgnization-name"><i
+                                                                    class="fa fa-minus-square"></i><span
+                                                                    class="menu-title dx8"
+                                                                    data-node-index="212">河北</span></a>
+                                                                <div class="pull-right" style=" padding-top:15px;"><span
+                                                                        class="anshowno zeta-showno anbj"><a href="#"><i
+                                                                        class="fa fa-pencil fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                        class="form-radio form-icon"><input
+                                                                        class="org-radio" type="radio"></label></div>
+                                                            </li>
+                                                            <li data-node-id="213" data-node-pid="7"
+                                                                data-node-name="山西"><a class="orgnization-name"><i
+                                                                    class="fa fa-minus-square"></i><span
+                                                                    class="menu-title dx8"
+                                                                    data-node-index="213">山西</span></a>
+                                                                <div class="pull-right" style=" padding-top:15px;"><span
+                                                                        class="anshowno zeta-showno anbj"><a href="#"><i
+                                                                        class="fa fa-pencil fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                        class="form-radio form-icon"><input
+                                                                        class="org-radio" type="radio"></label></div>
+                                                            </li>
+                                                            <li data-node-id="214" data-node-pid="7"
+                                                                data-node-name="内蒙古"><a class="orgnization-name"><i
+                                                                    class="fa fa-minus-square"></i><span
+                                                                    class="menu-title dx8"
+                                                                    data-node-index="214">内蒙古</span></a>
+                                                                <div class="pull-right" style=" padding-top:15px;"><span
+                                                                        class="anshowno zeta-showno anbj"><a href="#"><i
+                                                                        class="fa fa-pencil fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                        class="form-radio form-icon"><input
+                                                                        class="org-radio" type="radio"></label></div>
+                                                            </li>
+                                                            <li data-node-id="215" data-node-pid="7"
+                                                                data-node-name="辽宁"><a class="orgnization-name"><i
+                                                                    class="fa fa-minus-square"></i><span
+                                                                    class="menu-title dx8"
+                                                                    data-node-index="215">辽宁</span></a>
+                                                                <div class="pull-right" style=" padding-top:15px;"><span
+                                                                        class="anshowno zeta-showno anbj"><a href="#"><i
+                                                                        class="fa fa-pencil fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                        class="form-radio form-icon"><input
+                                                                        class="org-radio" type="radio"></label></div>
+                                                            </li>
+                                                            <li data-node-id="216" data-node-pid="7"
+                                                                data-node-name="吉林"><a class="orgnization-name"><i
+                                                                    class="fa fa-minus-square"></i><span
+                                                                    class="menu-title dx8"
+                                                                    data-node-index="216">吉林</span></a>
+                                                                <div class="pull-right" style=" padding-top:15px;"><span
+                                                                        class="anshowno zeta-showno anbj"><a href="#"><i
+                                                                        class="fa fa-pencil fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                        class="form-radio form-icon"><input
+                                                                        class="org-radio" type="radio"></label></div>
+                                                            </li>
+                                                            <li data-node-id="217" data-node-pid="7"
+                                                                data-node-name="黑龙江"><a class="orgnization-name"><i
+                                                                    class="fa fa-minus-square"></i><span
+                                                                    class="menu-title dx8"
+                                                                    data-node-index="217">黑龙江</span></a>
+                                                                <div class="pull-right" style=" padding-top:15px;"><span
+                                                                        class="anshowno zeta-showno anbj"><a href="#"><i
+                                                                        class="fa fa-pencil fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                        class="form-radio form-icon"><input
+                                                                        class="org-radio" type="radio"></label></div>
+                                                            </li>
+                                                            <li data-node-id="218" data-node-pid="7"
+                                                                data-node-name="上海"><a class="orgnization-name"><i
+                                                                    class="fa fa-minus-square"></i><span
+                                                                    class="menu-title dx8"
+                                                                    data-node-index="218">上海</span></a>
+                                                                <div class="pull-right" style=" padding-top:15px;"><span
+                                                                        class="anshowno zeta-showno anbj"><a href="#"><i
+                                                                        class="fa fa-pencil fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                        class="form-radio form-icon"><input
+                                                                        class="org-radio" type="radio"></label></div>
+                                                            </li>
+                                                            <li data-node-id="219" data-node-pid="7"
+                                                                data-node-name="江苏"><a class="orgnization-name"><i
+                                                                    class="fa fa-minus-square"></i><span
+                                                                    class="menu-title dx8"
+                                                                    data-node-index="219">江苏</span></a>
+                                                                <div class="pull-right" style=" padding-top:15px;"><span
+                                                                        class="anshowno zeta-showno anbj"><a href="#"><i
+                                                                        class="fa fa-pencil fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                        class="form-radio form-icon"><input
+                                                                        class="org-radio" type="radio"></label></div>
+                                                            </li>
+                                                            <li data-node-id="220" data-node-pid="7"
+                                                                data-node-name="浙江"><a class="orgnization-name"><i
+                                                                    class="fa fa-minus-square"></i><span
+                                                                    class="menu-title dx8"
+                                                                    data-node-index="220">浙江</span></a>
+                                                                <div class="pull-right" style=" padding-top:15px;"><span
+                                                                        class="anshowno zeta-showno anbj"><a href="#"><i
+                                                                        class="fa fa-pencil fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                        class="form-radio form-icon"><input
+                                                                        class="org-radio" type="radio"></label></div>
+                                                            </li>
+                                                            <li data-node-id="221" data-node-pid="7"
+                                                                data-node-name="安徽"><a class="orgnization-name"><i
+                                                                    class="fa fa-minus-square"></i><span
+                                                                    class="menu-title dx8"
+                                                                    data-node-index="221">安徽</span></a>
+                                                                <div class="pull-right" style=" padding-top:15px;"><span
+                                                                        class="anshowno zeta-showno anbj"><a href="#"><i
+                                                                        class="fa fa-pencil fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                        class="form-radio form-icon"><input
+                                                                        class="org-radio" type="radio"></label></div>
+                                                            </li>
+                                                            <li data-node-id="222" data-node-pid="7"
+                                                                data-node-name="福建"><a class="orgnization-name"><i
+                                                                    class="fa fa-minus-square"></i><span
+                                                                    class="menu-title dx8"
+                                                                    data-node-index="222">福建</span></a>
+                                                                <div class="pull-right" style=" padding-top:15px;"><span
+                                                                        class="anshowno zeta-showno anbj"><a href="#"><i
+                                                                        class="fa fa-pencil fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                        class="form-radio form-icon"><input
+                                                                        class="org-radio" type="radio"></label></div>
+                                                            </li>
+                                                            <li data-node-id="223" data-node-pid="7"
+                                                                data-node-name="江西"><a class="orgnization-name"><i
+                                                                    class="fa fa-minus-square"></i><span
+                                                                    class="menu-title dx8"
+                                                                    data-node-index="223">江西</span></a>
+                                                                <div class="pull-right" style=" padding-top:15px;"><span
+                                                                        class="anshowno zeta-showno anbj"><a href="#"><i
+                                                                        class="fa fa-pencil fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                        class="form-radio form-icon"><input
+                                                                        class="org-radio" type="radio"></label></div>
+                                                            </li>
+                                                            <li data-node-id="224" data-node-pid="7"
+                                                                data-node-name="山东"><a class="orgnization-name"><i
+                                                                    class="fa fa-minus-square"></i><span
+                                                                    class="menu-title dx8"
+                                                                    data-node-index="224">山东</span></a>
+                                                                <div class="pull-right" style=" padding-top:15px;"><span
+                                                                        class="anshowno zeta-showno anbj"><a href="#"><i
+                                                                        class="fa fa-pencil fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                        class="form-radio form-icon"><input
+                                                                        class="org-radio" type="radio"></label></div>
+                                                            </li>
+                                                            <li data-node-id="225" data-node-pid="7"
+                                                                data-node-name="河南"><a class="orgnization-name"><i
+                                                                    class="fa fa-minus-square"></i><span
+                                                                    class="menu-title dx8"
+                                                                    data-node-index="225">河南</span></a>
+                                                                <div class="pull-right" style=" padding-top:15px;"><span
+                                                                        class="anshowno zeta-showno anbj"><a href="#"><i
+                                                                        class="fa fa-pencil fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                        class="form-radio form-icon"><input
+                                                                        class="org-radio" type="radio"></label></div>
+                                                            </li>
+                                                            <li data-node-id="226" data-node-pid="7"
+                                                                data-node-name="湖北"><a class="orgnization-name"><i
+                                                                    class="fa fa-minus-square"></i><span
+                                                                    class="menu-title dx8"
+                                                                    data-node-index="226">湖北</span></a>
+                                                                <div class="pull-right" style=" padding-top:15px;"><span
+                                                                        class="anshowno zeta-showno anbj"><a href="#"><i
+                                                                        class="fa fa-pencil fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                        class="form-radio form-icon"><input
+                                                                        class="org-radio" type="radio"></label></div>
+                                                            </li>
+                                                            <li data-node-id="227" data-node-pid="7"
+                                                                data-node-name="湖南"><a class="orgnization-name"><i
+                                                                    class="fa fa-minus-square"></i><span
+                                                                    class="menu-title dx8"
+                                                                    data-node-index="227">湖南</span></a>
+                                                                <div class="pull-right" style=" padding-top:15px;"><span
+                                                                        class="anshowno zeta-showno anbj"><a href="#"><i
+                                                                        class="fa fa-pencil fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                        class="form-radio form-icon"><input
+                                                                        class="org-radio" type="radio"></label></div>
+                                                            </li>
+                                                            <li data-node-id="228" data-node-pid="7"
+                                                                data-node-name="广东"><a class="orgnization-name"><i
+                                                                    class="fa fa-minus-square"></i><span
+                                                                    class="menu-title dx8"
+                                                                    data-node-index="228">广东</span></a>
+                                                                <div class="pull-right" style=" padding-top:15px;"><span
+                                                                        class="anshowno zeta-showno anbj"><a href="#"><i
+                                                                        class="fa fa-pencil fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                        class="form-radio form-icon"><input
+                                                                        class="org-radio" type="radio"></label></div>
+                                                            </li>
+                                                            <li data-node-id="229" data-node-pid="7"
+                                                                data-node-name="广西"><a class="orgnization-name"><i
+                                                                    class="fa fa-minus-square"></i><span
+                                                                    class="menu-title dx8"
+                                                                    data-node-index="229">广西</span></a>
+                                                                <div class="pull-right" style=" padding-top:15px;"><span
+                                                                        class="anshowno zeta-showno anbj"><a href="#"><i
+                                                                        class="fa fa-pencil fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                        class="form-radio form-icon"><input
+                                                                        class="org-radio" type="radio"></label></div>
+                                                            </li>
+                                                            <li data-node-id="230" data-node-pid="7"
+                                                                data-node-name="海南"><a class="orgnization-name"><i
+                                                                    class="fa fa-minus-square"></i><span
+                                                                    class="menu-title dx8"
+                                                                    data-node-index="230">海南</span></a>
+                                                                <div class="pull-right" style=" padding-top:15px;"><span
+                                                                        class="anshowno zeta-showno anbj"><a href="#"><i
+                                                                        class="fa fa-pencil fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                        class="form-radio form-icon"><input
+                                                                        class="org-radio" type="radio"></label></div>
+                                                            </li>
+                                                            <li data-node-id="231" data-node-pid="7"
+                                                                data-node-name="重庆"><a class="orgnization-name"><i
+                                                                    class="fa fa-minus-square"></i><span
+                                                                    class="menu-title dx8"
+                                                                    data-node-index="231">重庆</span></a>
+                                                                <div class="pull-right" style=" padding-top:15px;"><span
+                                                                        class="anshowno zeta-showno anbj"><a href="#"><i
+                                                                        class="fa fa-pencil fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                        class="form-radio form-icon"><input
+                                                                        class="org-radio" type="radio"></label></div>
+                                                            </li>
+                                                            <li data-node-id="232" data-node-pid="7"
+                                                                data-node-name="四川"><a class="orgnization-name"><i
+                                                                    class="fa fa-minus-square"></i><span
+                                                                    class="menu-title dx8"
+                                                                    data-node-index="232">四川</span></a>
+                                                                <div class="pull-right" style=" padding-top:15px;"><span
+                                                                        class="anshowno zeta-showno anbj"><a href="#"><i
+                                                                        class="fa fa-pencil fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                        class="form-radio form-icon"><input
+                                                                        class="org-radio" type="radio"></label></div>
+                                                            </li>
+                                                            <li data-node-id="233" data-node-pid="7"
+                                                                data-node-name="贵州"><a class="orgnization-name"><i
+                                                                    class="fa fa-minus-square"></i><span
+                                                                    class="menu-title dx8"
+                                                                    data-node-index="233">贵州</span></a>
+                                                                <div class="pull-right" style=" padding-top:15px;"><span
+                                                                        class="anshowno zeta-showno anbj"><a href="#"><i
+                                                                        class="fa fa-pencil fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                        class="form-radio form-icon"><input
+                                                                        class="org-radio" type="radio"></label></div>
+                                                            </li>
+                                                            <li data-node-id="234" data-node-pid="7"
+                                                                data-node-name="云南"><a class="orgnization-name"><i
+                                                                    class="fa fa-minus-square"></i><span
+                                                                    class="menu-title dx8"
+                                                                    data-node-index="234">云南</span></a>
+                                                                <div class="pull-right" style=" padding-top:15px;"><span
+                                                                        class="anshowno zeta-showno anbj"><a href="#"><i
+                                                                        class="fa fa-pencil fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                        class="form-radio form-icon"><input
+                                                                        class="org-radio" type="radio"></label></div>
+                                                            </li>
+                                                            <li data-node-id="235" data-node-pid="7"
+                                                                data-node-name="西藏"><a class="orgnization-name"><i
+                                                                    class="fa fa-minus-square"></i><span
+                                                                    class="menu-title dx8"
+                                                                    data-node-index="235">西藏</span></a>
+                                                                <div class="pull-right" style=" padding-top:15px;"><span
+                                                                        class="anshowno zeta-showno anbj"><a href="#"><i
+                                                                        class="fa fa-pencil fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                        class="form-radio form-icon"><input
+                                                                        class="org-radio" type="radio"></label></div>
+                                                            </li>
+                                                            <li data-node-id="236" data-node-pid="7"
+                                                                data-node-name="陕西"><a class="orgnization-name"><i
+                                                                    class="fa fa-minus-square"></i><span
+                                                                    class="menu-title dx8"
+                                                                    data-node-index="236">陕西</span></a>
+                                                                <div class="pull-right" style=" padding-top:15px;"><span
+                                                                        class="anshowno zeta-showno anbj"><a href="#"><i
+                                                                        class="fa fa-pencil fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                        class="form-radio form-icon"><input
+                                                                        class="org-radio" type="radio"></label></div>
+                                                            </li>
+                                                            <li data-node-id="237" data-node-pid="7"
+                                                                data-node-name="甘肃"><a class="orgnization-name"><i
+                                                                    class="fa fa-minus-square"></i><span
+                                                                    class="menu-title dx8"
+                                                                    data-node-index="237">甘肃</span></a>
+                                                                <div class="pull-right" style=" padding-top:15px;"><span
+                                                                        class="anshowno zeta-showno anbj"><a href="#"><i
+                                                                        class="fa fa-pencil fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                        class="form-radio form-icon"><input
+                                                                        class="org-radio" type="radio"></label></div>
+                                                            </li>
+                                                            <li data-node-id="238" data-node-pid="7"
+                                                                data-node-name="青海"><a class="orgnization-name"><i
+                                                                    class="fa fa-minus-square"></i><span
+                                                                    class="menu-title dx8"
+                                                                    data-node-index="238">青海</span></a>
+                                                                <div class="pull-right" style=" padding-top:15px;"><span
+                                                                        class="anshowno zeta-showno anbj"><a href="#"><i
+                                                                        class="fa fa-pencil fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                        class="form-radio form-icon"><input
+                                                                        class="org-radio" type="radio"></label></div>
+                                                            </li>
+                                                            <li data-node-id="239" data-node-pid="7"
+                                                                data-node-name="宁夏"><a class="orgnization-name"><i
+                                                                    class="fa fa-minus-square"></i><span
+                                                                    class="menu-title dx8"
+                                                                    data-node-index="239">宁夏</span></a>
+                                                                <div class="pull-right" style=" padding-top:15px;"><span
+                                                                        class="anshowno zeta-showno anbj"><a href="#"><i
+                                                                        class="fa fa-pencil fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                        class="form-radio form-icon"><input
+                                                                        class="org-radio" type="radio"></label></div>
+                                                            </li>
+                                                            <li data-node-id="240" data-node-pid="7"
+                                                                data-node-name="新疆"><a class="orgnization-name"><i
+                                                                    class="fa fa-minus-square"></i><span
+                                                                    class="menu-title dx8"
+                                                                    data-node-index="240">新疆</span></a>
+                                                                <div class="pull-right" style=" padding-top:15px;"><span
+                                                                        class="anshowno zeta-showno anbj"><a href="#"><i
+                                                                        class="fa fa-pencil fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                        class="form-radio form-icon"><input
+                                                                        class="org-radio" type="radio"></label></div>
+                                                            </li>
+                                                            <li data-node-id="278" data-node-pid="7"
+                                                                data-node-name="新疆生产建设兵团"><a class="orgnization-name"><i
+                                                                    class="fa fa-minus-square"></i><span
+                                                                    class="menu-title dx8" data-node-index="278">新疆生产建设兵团</span></a>
+                                                                <div class="pull-right" style=" padding-top:15px;"><span
+                                                                        class="anshowno zeta-showno anbj"><a href="#"><i
+                                                                        class="fa fa-pencil fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                        class="form-radio form-icon"><input
+                                                                        class="org-radio" type="radio"></label></div>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="subNode-expand" data-node-id="8" data-node-pid="1"
+                                                        data-node-name="片区"><a class="orgnization-name"><i
+                                                            class="fa fa-plus-square"></i><span class="menu-title dx8"
+                                                                                                data-node-index="8">片区</span></a>
+                                                        <div class="pull-right" style=" padding-top:15px;"><span
+                                                                class="anshowno zeta-showno anbj"><a href="#"><i
+                                                                class="fa fa-pencil fa-lg"></i></a><a href="#"><i
+                                                                class="fa fa-fa fa-times fa-lg"></i></a><a href="#"><i
+                                                                class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                class="form-radio form-icon"><input class="org-radio"
+                                                                                                    type="radio"></label>
+                                                        </div>
+                                                        <ul class="zeta-bgcolor05 collapse">
+                                                            <li class="subNode-expand" data-node-id="145"
+                                                                data-node-pid="8" data-node-name="第一协作区"><a
+                                                                    class="orgnization-name"><i
+                                                                    class="fa fa-plus-square"></i><span
+                                                                    class="menu-title dx8"
+                                                                    data-node-index="145">第一协作区</span></a>
+                                                                <div class="pull-right" style=" padding-top:15px;"><span
+                                                                        class="anshowno zeta-showno anbj"><a href="#"><i
+                                                                        class="fa fa-pencil fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                        class="form-radio form-icon"><input
+                                                                        class="org-radio" type="radio"></label></div>
+                                                                <ul class="zeta-bgcolor05 collapse">
+                                                                    <li data-node-id="151" data-node-pid="145"
+                                                                        data-node-name="河北"><a class="orgnization-name"><i
+                                                                            class="fa fa-minus-square"></i><span
+                                                                            class="menu-title dx8"
+                                                                            data-node-index="151">河北</span></a>
+                                                                        <div class="pull-right"
+                                                                             style=" padding-top:15px;"><span
+                                                                                class="anshowno zeta-showno anbj"><a
+                                                                                href="#"><i
+                                                                                class="fa fa-pencil fa-lg"></i></a><a
+                                                                                href="#"><i
+                                                                                class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                                href="#"><i
+                                                                                class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                                class="form-radio form-icon"><input
+                                                                                class="org-radio" type="radio"></label>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li data-node-id="152" data-node-pid="145"
+                                                                        data-node-name="山西"><a class="orgnization-name"><i
+                                                                            class="fa fa-minus-square"></i><span
+                                                                            class="menu-title dx8"
+                                                                            data-node-index="152">山西</span></a>
+                                                                        <div class="pull-right"
+                                                                             style=" padding-top:15px;"><span
+                                                                                class="anshowno zeta-showno anbj"><a
+                                                                                href="#"><i
+                                                                                class="fa fa-pencil fa-lg"></i></a><a
+                                                                                href="#"><i
+                                                                                class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                                href="#"><i
+                                                                                class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                                class="form-radio form-icon"><input
+                                                                                class="org-radio" type="radio"></label>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li data-node-id="153" data-node-pid="145"
+                                                                        data-node-name="陕西"><a class="orgnization-name"><i
+                                                                            class="fa fa-minus-square"></i><span
+                                                                            class="menu-title dx8"
+                                                                            data-node-index="153">陕西</span></a>
+                                                                        <div class="pull-right"
+                                                                             style=" padding-top:15px;"><span
+                                                                                class="anshowno zeta-showno anbj"><a
+                                                                                href="#"><i
+                                                                                class="fa fa-pencil fa-lg"></i></a><a
+                                                                                href="#"><i
+                                                                                class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                                href="#"><i
+                                                                                class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                                class="form-radio form-icon"><input
+                                                                                class="org-radio" type="radio"></label>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li data-node-id="154" data-node-pid="145"
+                                                                        data-node-name="甘肃"><a class="orgnization-name"><i
+                                                                            class="fa fa-minus-square"></i><span
+                                                                            class="menu-title dx8"
+                                                                            data-node-index="154">甘肃</span></a>
+                                                                        <div class="pull-right"
+                                                                             style=" padding-top:15px;"><span
+                                                                                class="anshowno zeta-showno anbj"><a
+                                                                                href="#"><i
+                                                                                class="fa fa-pencil fa-lg"></i></a><a
+                                                                                href="#"><i
+                                                                                class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                                href="#"><i
+                                                                                class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                                class="form-radio form-icon"><input
+                                                                                class="org-radio" type="radio"></label>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li data-node-id="155" data-node-pid="145"
+                                                                        data-node-name="青海"><a class="orgnization-name"><i
+                                                                            class="fa fa-minus-square"></i><span
+                                                                            class="menu-title dx8"
+                                                                            data-node-index="155">青海</span></a>
+                                                                        <div class="pull-right"
+                                                                             style=" padding-top:15px;"><span
+                                                                                class="anshowno zeta-showno anbj"><a
+                                                                                href="#"><i
+                                                                                class="fa fa-pencil fa-lg"></i></a><a
+                                                                                href="#"><i
+                                                                                class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                                href="#"><i
+                                                                                class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                                class="form-radio form-icon"><input
+                                                                                class="org-radio" type="radio"></label>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li data-node-id="156" data-node-pid="145"
+                                                                        data-node-name="宁夏"><a class="orgnization-name"><i
+                                                                            class="fa fa-minus-square"></i><span
+                                                                            class="menu-title dx8"
+                                                                            data-node-index="156">宁夏</span></a>
+                                                                        <div class="pull-right"
+                                                                             style=" padding-top:15px;"><span
+                                                                                class="anshowno zeta-showno anbj"><a
+                                                                                href="#"><i
+                                                                                class="fa fa-pencil fa-lg"></i></a><a
+                                                                                href="#"><i
+                                                                                class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                                href="#"><i
+                                                                                class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                                class="form-radio form-icon"><input
+                                                                                class="org-radio" type="radio"></label>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li data-node-id="277" data-node-pid="145"
+                                                                        data-node-name="北京"><a class="orgnization-name"><i
+                                                                            class="fa fa-minus-square"></i><span
+                                                                            class="menu-title dx8"
+                                                                            data-node-index="277">北京</span></a>
+                                                                        <div class="pull-right"
+                                                                             style=" padding-top:15px;"><span
+                                                                                class="anshowno zeta-showno anbj"><a
+                                                                                href="#"><i
+                                                                                class="fa fa-pencil fa-lg"></i></a><a
+                                                                                href="#"><i
+                                                                                class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                                href="#"><i
+                                                                                class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                                class="form-radio form-icon"><input
+                                                                                class="org-radio" type="radio"></label>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li class="subNode-expand" data-node-id="146"
+                                                                data-node-pid="8" data-node-name="第二协作区"><a
+                                                                    class="orgnization-name"><i
+                                                                    class="fa fa-plus-square"></i><span
+                                                                    class="menu-title dx8"
+                                                                    data-node-index="146">第二协作区</span></a>
+                                                                <div class="pull-right" style=" padding-top:15px;"><span
+                                                                        class="anshowno zeta-showno anbj"><a href="#"><i
+                                                                        class="fa fa-pencil fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                        class="form-radio form-icon"><input
+                                                                        class="org-radio" type="radio"></label></div>
+                                                                <ul class="zeta-bgcolor05 collapse">
+                                                                    <li data-node-id="157" data-node-pid="146"
+                                                                        data-node-name="天津"><a class="orgnization-name"><i
+                                                                            class="fa fa-minus-square"></i><span
+                                                                            class="menu-title dx8"
+                                                                            data-node-index="157">天津</span></a>
+                                                                        <div class="pull-right"
+                                                                             style=" padding-top:15px;"><span
+                                                                                class="anshowno zeta-showno anbj"><a
+                                                                                href="#"><i
+                                                                                class="fa fa-pencil fa-lg"></i></a><a
+                                                                                href="#"><i
+                                                                                class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                                href="#"><i
+                                                                                class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                                class="form-radio form-icon"><input
+                                                                                class="org-radio" type="radio"></label>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li data-node-id="158" data-node-pid="146"
+                                                                        data-node-name="内蒙古"><a
+                                                                            class="orgnization-name"><i
+                                                                            class="fa fa-minus-square"></i><span
+                                                                            class="menu-title dx8"
+                                                                            data-node-index="158">内蒙古</span></a>
+                                                                        <div class="pull-right"
+                                                                             style=" padding-top:15px;"><span
+                                                                                class="anshowno zeta-showno anbj"><a
+                                                                                href="#"><i
+                                                                                class="fa fa-pencil fa-lg"></i></a><a
+                                                                                href="#"><i
+                                                                                class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                                href="#"><i
+                                                                                class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                                class="form-radio form-icon"><input
+                                                                                class="org-radio" type="radio"></label>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li data-node-id="159" data-node-pid="146"
+                                                                        data-node-name="辽宁"><a class="orgnization-name"><i
+                                                                            class="fa fa-minus-square"></i><span
+                                                                            class="menu-title dx8"
+                                                                            data-node-index="159">辽宁</span></a>
+                                                                        <div class="pull-right"
+                                                                             style=" padding-top:15px;"><span
+                                                                                class="anshowno zeta-showno anbj"><a
+                                                                                href="#"><i
+                                                                                class="fa fa-pencil fa-lg"></i></a><a
+                                                                                href="#"><i
+                                                                                class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                                href="#"><i
+                                                                                class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                                class="form-radio form-icon"><input
+                                                                                class="org-radio" type="radio"></label>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li data-node-id="160" data-node-pid="146"
+                                                                        data-node-name="吉林"><a class="orgnization-name"><i
+                                                                            class="fa fa-minus-square"></i><span
+                                                                            class="menu-title dx8"
+                                                                            data-node-index="160">吉林</span></a>
+                                                                        <div class="pull-right"
+                                                                             style=" padding-top:15px;"><span
+                                                                                class="anshowno zeta-showno anbj"><a
+                                                                                href="#"><i
+                                                                                class="fa fa-pencil fa-lg"></i></a><a
+                                                                                href="#"><i
+                                                                                class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                                href="#"><i
+                                                                                class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                                class="form-radio form-icon"><input
+                                                                                class="org-radio" type="radio"></label>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li data-node-id="161" data-node-pid="146"
+                                                                        data-node-name="黑龙江"><a
+                                                                            class="orgnization-name"><i
+                                                                            class="fa fa-minus-square"></i><span
+                                                                            class="menu-title dx8"
+                                                                            data-node-index="161">黑龙江</span></a>
+                                                                        <div class="pull-right"
+                                                                             style=" padding-top:15px;"><span
+                                                                                class="anshowno zeta-showno anbj"><a
+                                                                                href="#"><i
+                                                                                class="fa fa-pencil fa-lg"></i></a><a
+                                                                                href="#"><i
+                                                                                class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                                href="#"><i
+                                                                                class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                                class="form-radio form-icon"><input
+                                                                                class="org-radio" type="radio"></label>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li data-node-id="162" data-node-pid="146"
+                                                                        data-node-name="山东"><a class="orgnization-name"><i
+                                                                            class="fa fa-minus-square"></i><span
+                                                                            class="menu-title dx8"
+                                                                            data-node-index="162">山东</span></a>
+                                                                        <div class="pull-right"
+                                                                             style=" padding-top:15px;"><span
+                                                                                class="anshowno zeta-showno anbj"><a
+                                                                                href="#"><i
+                                                                                class="fa fa-pencil fa-lg"></i></a><a
+                                                                                href="#"><i
+                                                                                class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                                href="#"><i
+                                                                                class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                                class="form-radio form-icon"><input
+                                                                                class="org-radio" type="radio"></label>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li class="subNode-expand" data-node-id="147"
+                                                                data-node-pid="8" data-node-name="第三协作区"><a
+                                                                    class="orgnization-name"><i
+                                                                    class="fa fa-plus-square"></i><span
+                                                                    class="menu-title dx8"
+                                                                    data-node-index="147">第三协作区</span></a>
+                                                                <div class="pull-right" style=" padding-top:15px;"><span
+                                                                        class="anshowno zeta-showno anbj"><a href="#"><i
+                                                                        class="fa fa-pencil fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                        class="form-radio form-icon"><input
+                                                                        class="org-radio" type="radio"></label></div>
+                                                                <ul class="zeta-bgcolor05 collapse">
+                                                                    <li data-node-id="163" data-node-pid="147"
+                                                                        data-node-name="上海"><a class="orgnization-name"><i
+                                                                            class="fa fa-minus-square"></i><span
+                                                                            class="menu-title dx8"
+                                                                            data-node-index="163">上海</span></a>
+                                                                        <div class="pull-right"
+                                                                             style=" padding-top:15px;"><span
+                                                                                class="anshowno zeta-showno anbj"><a
+                                                                                href="#"><i
+                                                                                class="fa fa-pencil fa-lg"></i></a><a
+                                                                                href="#"><i
+                                                                                class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                                href="#"><i
+                                                                                class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                                class="form-radio form-icon"><input
+                                                                                class="org-radio" type="radio"></label>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li data-node-id="164" data-node-pid="147"
+                                                                        data-node-name="江苏"><a class="orgnization-name"><i
+                                                                            class="fa fa-minus-square"></i><span
+                                                                            class="menu-title dx8"
+                                                                            data-node-index="164">江苏</span></a>
+                                                                        <div class="pull-right"
+                                                                             style=" padding-top:15px;"><span
+                                                                                class="anshowno zeta-showno anbj"><a
+                                                                                href="#"><i
+                                                                                class="fa fa-pencil fa-lg"></i></a><a
+                                                                                href="#"><i
+                                                                                class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                                href="#"><i
+                                                                                class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                                class="form-radio form-icon"><input
+                                                                                class="org-radio" type="radio"></label>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li data-node-id="165" data-node-pid="147"
+                                                                        data-node-name="安徽"><a class="orgnization-name"><i
+                                                                            class="fa fa-minus-square"></i><span
+                                                                            class="menu-title dx8"
+                                                                            data-node-index="165">安徽</span></a>
+                                                                        <div class="pull-right"
+                                                                             style=" padding-top:15px;"><span
+                                                                                class="anshowno zeta-showno anbj"><a
+                                                                                href="#"><i
+                                                                                class="fa fa-pencil fa-lg"></i></a><a
+                                                                                href="#"><i
+                                                                                class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                                href="#"><i
+                                                                                class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                                class="form-radio form-icon"><input
+                                                                                class="org-radio" type="radio"></label>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li data-node-id="166" data-node-pid="147"
+                                                                        data-node-name="河南"><a class="orgnization-name"><i
+                                                                            class="fa fa-minus-square"></i><span
+                                                                            class="menu-title dx8"
+                                                                            data-node-index="166">河南</span></a>
+                                                                        <div class="pull-right"
+                                                                             style=" padding-top:15px;"><span
+                                                                                class="anshowno zeta-showno anbj"><a
+                                                                                href="#"><i
+                                                                                class="fa fa-pencil fa-lg"></i></a><a
+                                                                                href="#"><i
+                                                                                class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                                href="#"><i
+                                                                                class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                                class="form-radio form-icon"><input
+                                                                                class="org-radio" type="radio"></label>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li data-node-id="167" data-node-pid="147"
+                                                                        data-node-name="湖北"><a class="orgnization-name"><i
+                                                                            class="fa fa-minus-square"></i><span
+                                                                            class="menu-title dx8"
+                                                                            data-node-index="167">湖北</span></a>
+                                                                        <div class="pull-right"
+                                                                             style=" padding-top:15px;"><span
+                                                                                class="anshowno zeta-showno anbj"><a
+                                                                                href="#"><i
+                                                                                class="fa fa-pencil fa-lg"></i></a><a
+                                                                                href="#"><i
+                                                                                class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                                href="#"><i
+                                                                                class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                                class="form-radio form-icon"><input
+                                                                                class="org-radio" type="radio"></label>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li class="subNode-expand" data-node-id="148"
+                                                                data-node-pid="8" data-node-name="第四协作区"><a
+                                                                    class="orgnization-name"><i
+                                                                    class="fa fa-plus-square"></i><span
+                                                                    class="menu-title dx8"
+                                                                    data-node-index="148">第四协作区</span></a>
+                                                                <div class="pull-right" style=" padding-top:15px;"><span
+                                                                        class="anshowno zeta-showno anbj"><a href="#"><i
+                                                                        class="fa fa-pencil fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                        class="form-radio form-icon"><input
+                                                                        class="org-radio" type="radio"></label></div>
+                                                                <ul class="zeta-bgcolor05 collapse">
+                                                                    <li data-node-id="169" data-node-pid="148"
+                                                                        data-node-name="浙江"><a class="orgnization-name"><i
+                                                                            class="fa fa-minus-square"></i><span
+                                                                            class="menu-title dx8"
+                                                                            data-node-index="169">浙江</span></a>
+                                                                        <div class="pull-right"
+                                                                             style=" padding-top:15px;"><span
+                                                                                class="anshowno zeta-showno anbj"><a
+                                                                                href="#"><i
+                                                                                class="fa fa-pencil fa-lg"></i></a><a
+                                                                                href="#"><i
+                                                                                class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                                href="#"><i
+                                                                                class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                                class="form-radio form-icon"><input
+                                                                                class="org-radio" type="radio"></label>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li data-node-id="170" data-node-pid="148"
+                                                                        data-node-name="福建"><a class="orgnization-name"><i
+                                                                            class="fa fa-minus-square"></i><span
+                                                                            class="menu-title dx8"
+                                                                            data-node-index="170">福建</span></a>
+                                                                        <div class="pull-right"
+                                                                             style=" padding-top:15px;"><span
+                                                                                class="anshowno zeta-showno anbj"><a
+                                                                                href="#"><i
+                                                                                class="fa fa-pencil fa-lg"></i></a><a
+                                                                                href="#"><i
+                                                                                class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                                href="#"><i
+                                                                                class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                                class="form-radio form-icon"><input
+                                                                                class="org-radio" type="radio"></label>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li data-node-id="171" data-node-pid="148"
+                                                                        data-node-name="江西"><a class="orgnization-name"><i
+                                                                            class="fa fa-minus-square"></i><span
+                                                                            class="menu-title dx8"
+                                                                            data-node-index="171">江西</span></a>
+                                                                        <div class="pull-right"
+                                                                             style=" padding-top:15px;"><span
+                                                                                class="anshowno zeta-showno anbj"><a
+                                                                                href="#"><i
+                                                                                class="fa fa-pencil fa-lg"></i></a><a
+                                                                                href="#"><i
+                                                                                class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                                href="#"><i
+                                                                                class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                                class="form-radio form-icon"><input
+                                                                                class="org-radio" type="radio"></label>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li data-node-id="172" data-node-pid="148"
+                                                                        data-node-name="广东"><a class="orgnization-name"><i
+                                                                            class="fa fa-minus-square"></i><span
+                                                                            class="menu-title dx8"
+                                                                            data-node-index="172">广东</span></a>
+                                                                        <div class="pull-right"
+                                                                             style=" padding-top:15px;"><span
+                                                                                class="anshowno zeta-showno anbj"><a
+                                                                                href="#"><i
+                                                                                class="fa fa-pencil fa-lg"></i></a><a
+                                                                                href="#"><i
+                                                                                class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                                href="#"><i
+                                                                                class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                                class="form-radio form-icon"><input
+                                                                                class="org-radio" type="radio"></label>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li data-node-id="173" data-node-pid="148"
+                                                                        data-node-name="广西"><a class="orgnization-name"><i
+                                                                            class="fa fa-minus-square"></i><span
+                                                                            class="menu-title dx8"
+                                                                            data-node-index="173">广西</span></a>
+                                                                        <div class="pull-right"
+                                                                             style=" padding-top:15px;"><span
+                                                                                class="anshowno zeta-showno anbj"><a
+                                                                                href="#"><i
+                                                                                class="fa fa-pencil fa-lg"></i></a><a
+                                                                                href="#"><i
+                                                                                class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                                href="#"><i
+                                                                                class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                                class="form-radio form-icon"><input
+                                                                                class="org-radio" type="radio"></label>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li data-node-id="174" data-node-pid="148"
+                                                                        data-node-name="海南"><a class="orgnization-name"><i
+                                                                            class="fa fa-minus-square"></i><span
+                                                                            class="menu-title dx8"
+                                                                            data-node-index="174">海南</span></a>
+                                                                        <div class="pull-right"
+                                                                             style=" padding-top:15px;"><span
+                                                                                class="anshowno zeta-showno anbj"><a
+                                                                                href="#"><i
+                                                                                class="fa fa-pencil fa-lg"></i></a><a
+                                                                                href="#"><i
+                                                                                class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                                href="#"><i
+                                                                                class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                                class="form-radio form-icon"><input
+                                                                                class="org-radio" type="radio"></label>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li class="subNode-expand" data-node-id="149"
+                                                                data-node-pid="8" data-node-name="第五协作区"><a
+                                                                    class="orgnization-name"><i
+                                                                    class="fa fa-plus-square"></i><span
+                                                                    class="menu-title dx8"
+                                                                    data-node-index="149">第五协作区</span></a>
+                                                                <div class="pull-right" style=" padding-top:15px;"><span
+                                                                        class="anshowno zeta-showno anbj"><a href="#"><i
+                                                                        class="fa fa-pencil fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                        class="form-radio form-icon"><input
+                                                                        class="org-radio" type="radio"></label></div>
+                                                                <ul class="zeta-bgcolor05 collapse">
+                                                                    <li data-node-id="175" data-node-pid="149"
+                                                                        data-node-name="重庆"><a class="orgnization-name"><i
+                                                                            class="fa fa-minus-square"></i><span
+                                                                            class="menu-title dx8"
+                                                                            data-node-index="175">重庆</span></a>
+                                                                        <div class="pull-right"
+                                                                             style=" padding-top:15px;"><span
+                                                                                class="anshowno zeta-showno anbj"><a
+                                                                                href="#"><i
+                                                                                class="fa fa-pencil fa-lg"></i></a><a
+                                                                                href="#"><i
+                                                                                class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                                href="#"><i
+                                                                                class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                                class="form-radio form-icon"><input
+                                                                                class="org-radio" type="radio"></label>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li data-node-id="176" data-node-pid="149"
+                                                                        data-node-name="四川"><a class="orgnization-name"><i
+                                                                            class="fa fa-minus-square"></i><span
+                                                                            class="menu-title dx8"
+                                                                            data-node-index="176">四川</span></a>
+                                                                        <div class="pull-right"
+                                                                             style=" padding-top:15px;"><span
+                                                                                class="anshowno zeta-showno anbj"><a
+                                                                                href="#"><i
+                                                                                class="fa fa-pencil fa-lg"></i></a><a
+                                                                                href="#"><i
+                                                                                class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                                href="#"><i
+                                                                                class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                                class="form-radio form-icon"><input
+                                                                                class="org-radio" type="radio"></label>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li data-node-id="177" data-node-pid="149"
+                                                                        data-node-name="贵州"><a class="orgnization-name"><i
+                                                                            class="fa fa-minus-square"></i><span
+                                                                            class="menu-title dx8"
+                                                                            data-node-index="177">贵州</span></a>
+                                                                        <div class="pull-right"
+                                                                             style=" padding-top:15px;"><span
+                                                                                class="anshowno zeta-showno anbj"><a
+                                                                                href="#"><i
+                                                                                class="fa fa-pencil fa-lg"></i></a><a
+                                                                                href="#"><i
+                                                                                class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                                href="#"><i
+                                                                                class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                                class="form-radio form-icon"><input
+                                                                                class="org-radio" type="radio"></label>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li data-node-id="178" data-node-pid="149"
+                                                                        data-node-name="云南"><a class="orgnization-name"><i
+                                                                            class="fa fa-minus-square"></i><span
+                                                                            class="menu-title dx8"
+                                                                            data-node-index="178">云南</span></a>
+                                                                        <div class="pull-right"
+                                                                             style=" padding-top:15px;"><span
+                                                                                class="anshowno zeta-showno anbj"><a
+                                                                                href="#"><i
+                                                                                class="fa fa-pencil fa-lg"></i></a><a
+                                                                                href="#"><i
+                                                                                class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                                href="#"><i
+                                                                                class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                                class="form-radio form-icon"><input
+                                                                                class="org-radio" type="radio"></label>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li data-node-id="179" data-node-pid="149"
+                                                                        data-node-name="西藏"><a class="orgnization-name"><i
+                                                                            class="fa fa-minus-square"></i><span
+                                                                            class="menu-title dx8"
+                                                                            data-node-index="179">西藏</span></a>
+                                                                        <div class="pull-right"
+                                                                             style=" padding-top:15px;"><span
+                                                                                class="anshowno zeta-showno anbj"><a
+                                                                                href="#"><i
+                                                                                class="fa fa-pencil fa-lg"></i></a><a
+                                                                                href="#"><i
+                                                                                class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                                href="#"><i
+                                                                                class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                                class="form-radio form-icon"><input
+                                                                                class="org-radio" type="radio"></label>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li data-node-id="180" data-node-pid="149"
+                                                                        data-node-name="新疆"><a class="orgnization-name"><i
+                                                                            class="fa fa-minus-square"></i><span
+                                                                            class="menu-title dx8"
+                                                                            data-node-index="180">新疆</span></a>
+                                                                        <div class="pull-right"
+                                                                             style=" padding-top:15px;"><span
+                                                                                class="anshowno zeta-showno anbj"><a
+                                                                                href="#"><i
+                                                                                class="fa fa-pencil fa-lg"></i></a><a
+                                                                                href="#"><i
+                                                                                class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                                href="#"><i
+                                                                                class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                                class="form-radio form-icon"><input
+                                                                                class="org-radio" type="radio"></label>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li data-node-id="181" data-node-pid="149"
+                                                                        data-node-name="新疆生产建设兵团"><a
+                                                                            class="orgnization-name"><i
+                                                                            class="fa fa-minus-square"></i><span
+                                                                            class="menu-title dx8"
+                                                                            data-node-index="181">新疆生产建设兵团</span></a>
+                                                                        <div class="pull-right"
+                                                                             style=" padding-top:15px;"><span
+                                                                                class="anshowno zeta-showno anbj"><a
+                                                                                href="#"><i
+                                                                                class="fa fa-pencil fa-lg"></i></a><a
+                                                                                href="#"><i
+                                                                                class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                                href="#"><i
+                                                                                class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                                class="form-radio form-icon"><input
+                                                                                class="org-radio" type="radio"></label>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="subNode-expand" data-node-id="9" data-node-pid="1"
+                                                        data-node-name="核心骨干网评员"><a class="orgnization-name"><i
+                                                            class="fa fa-plus-square"></i><span class="menu-title dx8"
+                                                                                                data-node-index="9">核心骨干网评员</span></a>
+                                                        <div class="pull-right" style=" padding-top:15px;"><span
+                                                                class="anshowno zeta-showno anbj"><a href="#"><i
+                                                                class="fa fa-pencil fa-lg"></i></a><a href="#"><i
+                                                                class="fa fa-fa fa-times fa-lg"></i></a><a href="#"><i
+                                                                class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                class="form-radio form-icon"><input class="org-radio"
+                                                                                                    type="radio"></label>
+                                                        </div>
+                                                        <ul class="zeta-bgcolor05 collapse">
+                                                            <li data-node-id="205" data-node-pid="9"
+                                                                data-node-name="作文组"><a class="orgnization-name"><i
+                                                                    class="fa fa-minus-square"></i><span
+                                                                    class="menu-title dx8"
+                                                                    data-node-index="205">作文组</span></a>
+                                                                <div class="pull-right" style=" padding-top:15px;"><span
+                                                                        class="anshowno zeta-showno anbj"><a href="#"><i
+                                                                        class="fa fa-pencil fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                        class="form-radio form-icon"><input
+                                                                        class="org-radio" type="radio"></label></div>
+                                                            </li>
+                                                            <li data-node-id="206" data-node-pid="9"
+                                                                data-node-name="钓鱼组"><a class="orgnization-name"><i
+                                                                    class="fa fa-minus-square"></i><span
+                                                                    class="menu-title dx8"
+                                                                    data-node-index="206">钓鱼组</span></a>
+                                                                <div class="pull-right" style=" padding-top:15px;"><span
+                                                                        class="anshowno zeta-showno anbj"><a href="#"><i
+                                                                        class="fa fa-pencil fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                        class="form-radio form-icon"><input
+                                                                        class="org-radio" type="radio"></label></div>
+                                                            </li>
+                                                            <li data-node-id="207" data-node-pid="9"
+                                                                data-node-name="跟帖组"><a class="orgnization-name"><i
+                                                                    class="fa fa-minus-square"></i><span
+                                                                    class="menu-title dx8"
+                                                                    data-node-index="207">跟帖组</span></a>
+                                                                <div class="pull-right" style=" padding-top:15px;"><span
+                                                                        class="anshowno zeta-showno anbj"><a href="#"><i
+                                                                        class="fa fa-pencil fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                        class="form-radio form-icon"><input
+                                                                        class="org-radio" type="radio"></label></div>
+                                                            </li>
+                                                            <li data-node-id="208" data-node-pid="9"
+                                                                data-node-name="大众组"><a class="orgnization-name"><i
+                                                                    class="fa fa-minus-square"></i><span
+                                                                    class="menu-title dx8"
+                                                                    data-node-index="208">大众组</span></a>
+                                                                <div class="pull-right" style=" padding-top:15px;"><span
+                                                                        class="anshowno zeta-showno anbj"><a href="#"><i
+                                                                        class="fa fa-pencil fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                        class="form-radio form-icon"><input
+                                                                        class="org-radio" type="radio"></label></div>
+                                                            </li>
+                                                            <li data-node-id="209" data-node-pid="9"
+                                                                data-node-name="新媒体组"><a class="orgnization-name"><i
+                                                                    class="fa fa-minus-square"></i><span
+                                                                    class="menu-title dx8"
+                                                                    data-node-index="209">新媒体组</span></a>
+                                                                <div class="pull-right" style=" padding-top:15px;"><span
+                                                                        class="anshowno zeta-showno anbj"><a href="#"><i
+                                                                        class="fa fa-pencil fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa-fa fa-times fa-lg"></i></a><a
+                                                                        href="#"><i class="fa fa fa-plus fa-lg"></i></a></span><label
+                                                                        class="form-radio form-icon"><input
+                                                                        class="org-radio" type="radio"></label></div>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </form>
+            <div class="modal-footer">
+                <button data-bb-handler="main" type="button" class="btn btn-bian2 submit-form">提交</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
