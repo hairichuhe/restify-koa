@@ -16,24 +16,23 @@ router.get("/file.html",(ctx,next)=>{
 });
 
 
-// 
+// 大神的代码
 router.post("/file_upload",upload.single("image"),async (ctx,next)=>{
 	let writeStream=fs.createWriteStream("uploads/"+moment().unix()+"_"+ctx.req.file["originalname"]);
 	let readStream=fs.createReadStream(ctx.req.file["path"]);
 	let write=function(){
 		return new Promise(function (resolve, reject) {
 			readStream.pipe(writeStream);
-			resolve();
-		}).then(function() {
-			console.log(222)
-		  	ctx.body={
-				new:"uploads/"+moment().unix()+"_"+ctx.req.file["originalname"],
-				path:ctx.req.file["path"]
-			};
-		});
-	}
-	console.log(111)
-	await write()
+			resolve(true);
+		})
+	};
+	console.log(111);
+	let result=await write();
+	console.log(result);
+	ctx.body={
+		new:"uploads/"+moment().unix()+"_"+ctx.req.file["originalname"],
+		path:ctx.req.file["path"]
+	};
 })
 
 // router.post("/file_upload",upload.single("image"),async (ctx,next)=>{
