@@ -29,6 +29,9 @@ router.post("/file_upload",upload.single("image"),async (ctx,next)=>{
 	console.log(111);
 	let result=await write();
 	console.log(result);
+	fs.unlink(ctx.req.file["path"], function(){
+		console.log("删除成功！")
+	})
 	ctx.body={
 		new:"uploads/"+moment().unix()+"_"+ctx.req.file["originalname"],
 		path:ctx.req.file["path"]
