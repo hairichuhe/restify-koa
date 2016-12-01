@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>测试滚动</title>
+</head>
+<body>
+<iframe frameborder="0" width="50%" srcdoc="<div style='height:2000px;width:1400px;'>Hello world!</div>" src="" style="float: left;height: 100vh" id="frameleft">
+
+</iframe>
+<iframe scrolling="no" frameborder="0" onscroll="console.log(2222)" width="50%" srcdoc="<div style='height:2000px;width:1400px;'>Hello div2!</div>" src="" style="height: 100vh" id="frameright">
+
+</iframe>
+<script type="text/javascript">
+	window.document.getElementById("frameleft").contentWindow.onscroll = function() {
+		var lfm = document.getElementById("frameleft").contentWindow.document.documentElement;
+		var rfm = document.getElementById("frameright").contentWindow.document.documentElement;
+		rfm.scrollTop=lfm.scrollTop;
+		rfm.scrollLeft=lfm.scrollLeft;
+	};
+	// window.document.getElementById("frameright").contentWindow.onscroll = function() {
+	// 	var lfm = document.getElementById("frameleft").contentWindow.document.documentElement;
+	// 	var rfm = document.getElementById("frameright").contentWindow.document.documentElement;
+	// 	lfm.scrollTop=rfm.scrollTop;
+	// }
+</script>
+</body>
+</html>
