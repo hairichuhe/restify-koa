@@ -1,2 +1,2 @@
-console.log(__dirname + '/../')
-require('runkoa')(__dirname + '../rest.js')
+var path=require("path");
+require('runkoa')(path.resolve(__dirname,'..') + '/rest.js');
